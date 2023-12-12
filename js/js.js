@@ -24,7 +24,7 @@ const  Timer = () =>{
 
 	date.innerHTML = `${monthArr[today.getMonth()]},${weekArr[today.getDay()]} ${today.getDate()} ,${today.getFullYear()}`
 
-	Hours.innerHTML = today.getHours()>12 ? "0"+(today.getHours()-12):today.getHours() 	
+	Hours.innerHTML = today.getHours()<10 ? "0"+(today.getHours()-12):(today.getHours()-12) 	
 	Seconds.innerHTML = today.getSeconds()<10 ? "0"+today.getSeconds():today.getSeconds() 	
 	Minutes.innerHTML = today.getMinutes()<10 ? "0"+today.getMinutes():today.getMinutes() 	
 	AMPM.innerHTML = today.getHours()>11 ? "PM":"AM" 	
