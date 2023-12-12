@@ -8,6 +8,7 @@ const Seconds = document.querySelector(".Seconds")
 const shadow = document.querySelector('.own-shadow')
 const date = document.querySelector(".date")
 
+
 const  Timer = () =>{
 
 	const arr = [7,"a",1,"b",2,"c",3,8,"d",4,"e",9,5,"f",6]
@@ -19,27 +20,14 @@ const  Timer = () =>{
 		color+=arr[colorRan]
 	}
 	shadow.style.boxShadow=`0px 0px 1000px #${color}  `
+	const today = new Date()
 
-	const todays = new Date()
-	date.innerHTML = `${monthArr[todays.getMonth()]},${weekArr[todays.getDay()]} ${todays.getDate()}`
+	date.innerHTML = `${monthArr[today.getMonth()]},${weekArr[today.getDay()]} ${today.getDate()} ,${today.getFullYear()}`
 
-	const today = new Date().toLocaleTimeString()
-	
-	if (Number(today[0]+today[1])>9) {
-
-		Hours.innerHTML = today[0]+today[1]
-		Minutes.innerHTML = today[3]+today[4]
-		AMPM.innerHTML = today[9]+today[10]
-		const min =  new Date().getSeconds()
-		Seconds.innerHTML =min<10 ? "0" + min : min
-	}
-	else{
-		Hours.innerHTML = "0" + today[0]
-		Minutes.innerHTML = today[2]+today[3]
-		AMPM.innerHTML = today[8]+today[9]
-		const min =  new Date().getSeconds()
-		Seconds.innerHTML =min<10 ? "0" + min:min
-	}
+	Hours.innerHTML = today.getHours()>12 ? "0"+(today.getHours()-12):today.getHours() 	
+	Seconds.innerHTML = today.getSeconds()<10 ? "0"+today.getSeconds():today.getSeconds() 	
+	Minutes.innerHTML = today.getMinutes()<10 ? "0"+today.getMinutes():today.getMinutes() 	
+	AMPM.innerHTML = today.getHours()>11 ? "PM":"AM" 	
 
 }
 Timer()
