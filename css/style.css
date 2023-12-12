@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+*{	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family: 'Lilita One', sans-serif;
+	user-select: none;
+	}
+.row1{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.Hours{
+	background: linear-gradient(0deg, rgba(98,111,255,1) 0%, rgba(96,179,255,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: center;
+}
+
+.Minutes{
+	background: linear-gradient(0deg, rgba(255,118,139,1) 0%, rgba(255,168,107,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: center;
+}
+
+.AMPM{
+	background: linear-gradient(0deg, rgba(243,205,86,1) 0%, rgba(255,236,102,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: center;
+}
+
+.Seconds{
+	background: linear-gradient(0deg, rgba(40,193,136,1) 0%, rgba(44,186,219,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: center;
+}
+
+
+.own-shadow{
+	transition: all 1s ;
+	border-radius: 30px;
+}
+
+
+@media(min-width: 320px){
+
+.font-sm{
+	font-size: 80px;
+}
+
+}
+
+@media(min-width: 750px){
+
+.font-md{
+	font-size: 100px;
+}	
+}
+
+@media(min-width: 1024px){
+.font-lg{
+	font-size: 130px;
+}	
+}
+
+
