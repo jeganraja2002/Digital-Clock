@@ -1,6 +1,3 @@
-console.log()
-
-
 const Hours = document.querySelector(".Hours")
 const Minutes = document.querySelector(".Minutes")
 const AMPM = document.querySelector(".AMPM")
@@ -24,7 +21,7 @@ const  Timer = () =>{
 
 	date.innerHTML = `${monthArr[today.getMonth()]},${weekArr[today.getDay()]} ${today.getDate()} ,${today.getFullYear()}`
 
-	Hours.innerHTML = today.getHours()<10 ? "0"+(today.getHours()-12):(today.getHours()-12) 	
+	Hours.innerHTML = today.getHours()<10 ? today.getHours()==0 ? 12 :"0"+today.getHours():(today.getHours()-12) 	
 	Seconds.innerHTML = today.getSeconds()<10 ? "0"+today.getSeconds():today.getSeconds() 	
 	Minutes.innerHTML = today.getMinutes()<10 ? "0"+today.getMinutes():today.getMinutes() 	
 	AMPM.innerHTML = today.getHours()>11 ? "PM":"AM" 	
