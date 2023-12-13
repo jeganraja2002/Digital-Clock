@@ -5,6 +5,8 @@
 	box-sizing:border-box;
 	font-family: 'Lilita One', sans-serif;
 	user-select: none;
+	cursor: url('https://i.ibb.co/Zzb1nNp/c.png'), auto;
+
 	}
 .row1{
 	display: flex;
@@ -45,7 +47,6 @@
 	transition: all 1s ;
 	border-radius: 30px;
 }
-
 
 @media(min-width: 320px){
 
